@@ -25,6 +25,15 @@ struct Object{
 
 };
 
+struct asset{
+    
+    int ID;
+    int color;
+    char name[V];
+    char data[V];
+    
+};
+
 struct newObject{
     
     int positionX;
