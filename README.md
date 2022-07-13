@@ -13,3 +13,12 @@ entendiendo todo esto el archivo es simplente como mover un caracter
 pro la pantalla y ponerle limites.
 En las funciones en la que se va ha trabajar son las de sonido 
 y de mostrar imagenes en ascii.
+El unico archivo que tienes que incluir para usar todas las
+funciones , tipo de datos , structuras y de mas es el archivo 
+striggame.h nada mas los otros se conectan entre si por lo cual 
+agregarlos todos o uno que otro probablemente cause errores en 
+tiempo de ejecucion. 
+## ¿Para que creo mas archivos pudiendo utilizar uno?
+Es sencillo ya que escribir todo ese codigo en uno es un dolor de cabeza
+y errores por donde quier y muchas pero muchas lineas de codigo para un
+solo archivo si solo el archivo stringobject tiene entre 1024 lineas
