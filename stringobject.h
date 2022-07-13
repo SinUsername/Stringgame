@@ -130,7 +130,6 @@ static void fileAssets (const char nameAsset[V] , const char * data){
 	}
 
 	fprintf(file, "%s", data);
-	printf("StringLibrary: Se ha guardado\n");
 	fclose(file);
     
 }
