@@ -390,7 +390,7 @@ static void view_asset (int URL){
 
     }
 
-    char caracters[1024] = {'%', '\\', '|', '=', '[', ']', '<', '>', '{', '}', '@', '#', '$', '_', '&', '-', '+', '(', ')', '/', '*', '\"', '\'', ':', ';', '!', '?', '~', '`', 'N'};
+    char caracters[] = {'%', '\\', '|', '=', '[', ']', '<', '>', '{', '}', '@', '#', '$', '_', '&', '-', '+', '(', ')', '/', '*', '\"', '\'', ':', ';', '!', '?', '~', '`', 'N'};
 
     printf("[%c] = %d",caracters[URL],URL);
 
@@ -399,10 +399,12 @@ static void view_asset (int URL){
 void StrCreateAssets (char nombre_de_archivo[1024])
 {
 	FILE *db;
-	char caracters[1024] = {'%', '\\', '|', '=', '[', ']', '<', '>', '{', '}', '@', '#', '$', '_', '&', '-', '+', '(', ')', '/', '*', '\"', '\'', ':', ';', '!', '?', '~', '`', 'N' , 'A' , 'B' , 'C'};
+	char caracters[] = {'%', '\\', '|', '=', '[', ']', '<', '>', '{', '}', '@', '#', '$', '_', '&', '-', '+', '(', ')', '/', '*', '\"', '\'', ':', ';', '!', '?', '~', '`', 'N' , 'A' , 'B' , 'C'};
 	int opcion = 0;
 
 	int i;
+        
+        int memory_variables = 8*1024+8*1024+8*1024+8*1024+8*1024+4+4+4+8;
 
 	char cat[1024] = ".asset";
 	char nose[1024];
@@ -425,7 +427,7 @@ void StrCreateAssets (char nombre_de_archivo[1024])
 		printf("CreatorSprits\n\n");
 		printf("Nombre del archivo: %s\n", nose);
 
-		printf("Memoria estatica ocupada: %dBytes - 4,98kb\n",8*1024+8*1024+8*1024+8*1024+8*1024+4+4+4+8);
+		printf("Memoria estatica ocupada: %dBytes - 4,98kb\n",memory_variables);
 		printf("Opciones: 0 - 32 para caracteres 33 para salir\n\n");
 		printf("Version del editador: 1.0\n\n");
 		printf("Numero anterior\n\n\n");
@@ -446,199 +448,199 @@ void StrCreateAssets (char nombre_de_archivo[1024])
 		if (opcion == 0)
 		{
 			fprintf(db, "%c", caracters[0]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[0]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[0]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 1)
 		{
 			fprintf(db, "%c", caracters[1]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[1]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[1]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 2)
 		{
 			fprintf(db, "%c", caracters[2]);
-		    printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[2]);
+		        printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[2]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 3)
 		{
 			fprintf(db, "%c", caracters[3]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[3]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[3]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 4)
 		{
 			fprintf(db, "%c", caracters[4]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[4]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[4]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 5)
 		{
 			fprintf(db, "%c", caracters[5]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[5]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[5]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 6)
 		{
 			fprintf(db, "%c", caracters[6]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[6]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[6]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 7)
 		{
 			fprintf(db, "%c", caracters[7]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[7]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[7]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 8)
 		{
 			fprintf(db, "%c", caracters[8]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[8]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[8]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 9)
 		{
 			fprintf(db, "%c", caracters[9]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[9]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[9]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 10)
 		{
 			fprintf(db, "%c", caracters[10]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[10]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[10]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 11)
 		{
 			fprintf(db, "%c", caracters[11]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[11]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[11]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 12)
 		{
 			fprintf(db, "%c", caracters[12]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[12]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[12]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 13)
 		{
 			fprintf(db, "%c", caracters[13]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[13]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[13]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 14)
 		{
 			fprintf(db, "%c", caracters[14]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[14]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[14]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 15)
 		{
 			fprintf(db, "%c", caracters[15]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[15]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[15]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 16)
 		{
 			fprintf(db, "%c", caracters[16]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[16]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[16]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 17)
 		{
 			fprintf(db, "%c", caracters[17]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[17]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[17]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 18)
 		{
 			fprintf(db, "%c", caracters[18]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[18]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[18]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 19)
 		{
 			fprintf(db, "%c", caracters[19]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[19]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[19]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 20)
 		{
 			fprintf(db, "%c", caracters[20]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[20]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[20]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 21)
 		{
 			fprintf(db, "%c", caracters[21]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[21]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[21]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 22)
 		{
 			fprintf(db, "%c", caracters[22]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[22]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[22]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 23)
 		{
 			fprintf(db, "%c", caracters[23]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[23]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[23]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 24)
 		{
 			fprintf(db, "%c", caracters[24]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[24]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[24]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 25)
 		{
 			fprintf(db, "%c", caracters[25]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[25]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[25]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 26)
 		{
 			fprintf(db, "%c", caracters[26]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[26]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[26]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 27)
 		{
 			fprintf(db, "%c", caracters[27]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[27]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[27]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 28)
 		{
 			fprintf(db, "%c", caracters[28]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[28]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[28]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 29)
 		{
 			fprintf(db, "%c", caracters[29]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[29]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[29]);
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 30)
 		{
 			fprintf(db, "%c", caracters[30]);
-			printf("Escrity: Se ha guardado el caracter: [%c]\n", caracters[30]);
+			printf("Stringgame: Se ha guardado el caracter: [%c]\n", caracters[30]);
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 31)
 		{
 			fprintf(db, " ");
-			printf("Escrity: Se ha guardado el caracter: [ ]\n");
+			printf("Stringgame: Se ha guardado el caracter: [ ]\n");
 			Juego_Lee_Tecla();
 		}
 		if (opcion == 32)
 		{
 			fprintf(db, "\n");
-			printf("Escrity: Se ha guardado el caracter: [\\n]\n");
+			printf("Stringgame: Se ha guardado el caracter: [\\n]\n");
 			Juego_Lee_Tecla();
 		}
 		else if (opcion == 100)
@@ -647,7 +649,7 @@ void StrCreateAssets (char nombre_de_archivo[1024])
 
 			fprintf(db , "%c%c%c",caracters[1] , caracters[0] , caracters[0]);
 
-			printf("Escrity: Se ha guardado los caracteres: %c%c%c",caracters[1] , caracters[0] , caracters[0]);
+			printf("Stringgame: Se ha guardado los caracteres: %c%c%c",caracters[1] , caracters[0] , caracters[0]);
 
             Juego_Lee_Tecla();
 
@@ -666,7 +668,7 @@ void StrCreateAssets (char nombre_de_archivo[1024])
 
 			fprintf(db , "%c%c%c",caracters[1] , caracters[0] , caracters[1]);
 
-			printf("Escrity: Se ha guardado los caracteres: %c%c%c",caracters[1] , caracters[0] , caracters[1]);
+			printf("Stringgame: Se ha guardado los caracteres: %c%c%c",caracters[1] , caracters[0] , caracters[1]);
 
 			Juego_Lee_Tecla();
 
@@ -684,7 +686,7 @@ void StrCreateAssets (char nombre_de_archivo[1024])
 
 			fprintf(db , "%c%c%c",caracters[1] , caracters[0] , caracters[2]);
 
-			printf("Escrity: Se ha guardado los caracteres: %c%c%c",caracters[1] , caracters[0] , caracters[2]);
+			printf("Stringgame: Se ha guardado los caracteres: %c%c%c",caracters[1] , caracters[0] , caracters[2]);
 
 			Juego_Lee_Tecla();
 
